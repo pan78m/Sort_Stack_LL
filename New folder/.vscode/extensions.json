@@ -1,0 +1,30 @@
+{
+    "recommendations": [
+        "jeff-hykin.better-cpp-syntax",
+        "johnpapa.winteriscoming",
+        "wayou.vscode-todo-highlight",
+        "tabnine.tabnine-vscode",
+        "alefragnani.project-manager",
+        "esbenp.prettier-vscode",
+        "ziyasal.vscode-open-in-github",
+        "leizongmin.node-module-intellisense",
+        "equinusocio.vsc-material-theme-icons",
+        "ritwickdey.liveserver",
+        "abusaidm.html-snippets",
+        "tht13.html-preview-vscode",
+        "sidthesloth.html5-boilerplate",
+        "vincaslt.highlight-matching-tag",
+        "eamodio.gitlens",
+        "codezombiech.gitignore",
+        "donjayamanne.githistory",
+        "donjayamanne.git-extension-pack",
+        "usernamehw.errorlens",
+        "cschlosser.doxdocgen",
+        "naumovs.color-highlight",
+        "formulahendry.code-runner",
+        "twxs.cmake",
+        "austin.code-gnu-global",
+        "ms-vscode.cpptools",
+        "ms-dotnettools.vscode-dotnet-runtime"
+    ]
+}
