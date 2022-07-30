@@ -21,7 +21,7 @@ void printM(int a[][3], int r, int c)
         {
             for (j = c - 1; j >= 0; j--)
             {
-                if (j ==c-1)
+                if (j ==0||j==c-1||i==r-1||i==1)
 
                 {
                     printf("%d ", a[i][j]);
