@@ -8,10 +8,27 @@
  *
  * @returns int
  */
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+void print(int a[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d  ", a[i]);
+    }
 
+    if (flag == 0)
+    {
+        printf("\n the value already sorted.\n");
+    }
+}
 int main()
 {
-    int n, i, j,temp,flag=0;
+    int n, i, j, temp, flag = 0;
     printf("\n how many terms:");
     scanf("%d", &n);
     int a[n];
@@ -28,30 +45,31 @@ int main()
         printf("%d  ", a[i]);
     }
     printf("\n compare the value is:\n");
-    for(j=0;j<n-1;j++){
-         
-        for(i=0;i<n-j-1;i++){
-            if (a[i]>a[i+1]){
-            temp=a[i];
-            a[i]=a[i+1];
-            a[i+1]=temp; 
-            flag=1;
-             
-            }    
-           
+    for (j = 0; j < n - 1; j++)
+    {
+
+        for (i = 0; i < n - j - 1; i++)
+        {
+            if (a[i] > a[i + 1])
+            {
+                // temp=a[i];
+                // a[i]=a[i+1];
+                // a[i+1]=temp;
+                // flag=1;
+                swap(&a[i], &a[i + 1]);
+            }
         }
     }
     printf("\n final sorted array is:\n");
-    for(i=0;i<n;i++){
-        printf("%d  ",a[i]);
-         
-    }
-  
-    if (flag==0)
-    {
-       printf("\n the value already sorted.\n");
-    }
-    
+    // for (i = 0; i < n; i++)
+    // {
+    //     printf("%d  ", a[i]);
+    // }
 
+    // if (flag == 0)
+    // {
+    //     printf("\n the value already sorted.\n");
+    // }
+    print|(a,n);
     return 0;
 }

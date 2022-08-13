@@ -15,29 +15,18 @@ void inputM(int a[][3], int r, int c)
 void printM(int a[][3], int r, int c)
 {
     int i, j, count = 0;
-    printf("\nenter the search element:\n");
+    // printf("\nenter the search element:\n");
     int value;
-    scanf("%d", &value);
+    scanf("%d %d", &i, &j);
     for (i = 0; i < r; i++)
     {
         for (j = 0; j < c; j++)
         {
-            if (a[i][j] == value)
-            {
-                printf("a[%d],[%d]\n", i, j);
-                count++;
-            }
+            value = a[i][j];
         }
         printf("\n");
     }
-    if (count == 0)
-    {
-        printf("\nValue is not found.\n");
-    }
-    else
-    {
-        printf("total times=%d\n", count);
-    }
+    printf("value is index[%d][%d]=%4d\n", i, j, value);
 }
 int main()
 {
@@ -46,6 +35,16 @@ int main()
     printf("\n enter the array:\n");
     inputM(a, r, c);
     printf("\nprint the array:\n");
+
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            printf("%5d", a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\nPrint the index search value\n");
     printM(a, r, c);
 
     return 0;

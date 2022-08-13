@@ -46,7 +46,15 @@ int main()
     printf("\n enter the array:\n");
     inputM(a, r, c);
     printf("\nprint the array:\n");
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            printf("%5d", a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\nPrint the index search value\n");
     printM(a, r, c);
-
     return 0;
 }

@@ -25,7 +25,7 @@ void printP(int x1, int x2, int x3, int y1, int y2, int y3)
     int a, b;
     a = sqrt(((x1 - x2)*(x1 - x2))+ ((y1 - y2)* (y1 - y2)));
     b = sqrt(((x3 - x2)*(x3 - x2))+ ((y3 - y2)*(y3 - y2)));
-    int perimeter = 2*a+2*b;
+    int perimeter = 2*(a+b);
     printf("perimeter is=%d", perimeter);
     printf("\n\n");
 }

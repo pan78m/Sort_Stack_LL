@@ -16,13 +16,19 @@ void Fmatrix(int a[][10], int r, int c)
 void multi(int a[][10], int b[][10], int mul[][10], int r1, int c1, int r2, int c2)
 {
     int i, j, k;
-    for (i = 0; i < r1; i++)
+    for (i = 0; i < r1; i++) // matrix mul koror somoy fmat ar col & Smat row vanish hoy so first loop r1 theke
     {
-        for (j = 0; j < c1; j++)
+        for (j = 0; j < c2; j++) // second loop c2 theke
         {
             mul[i][j] = 0;
-            for (k = 0; k <c1; k++)
-            {
+            for (k = 0; k < r2; k++) // final loop r2 or c1 jetai dibo kaj korbe
+            {                        /*
+                                         mul[i][j]= a[0][0]*b[0][0]+a[0][1]*b[1][0]
+                                         here we see that a matrix row are no change but a matrix is col are change
+                                         on the other hand b matrix row are change but col are no change .Here use of
+                                         first row for a matrix and first col are b matrix just so the final term is
+                                         multi[i][j] += a[i][k] * b[k][j];this is the main funda of multiplication
+                                         */
                 mul[i][j] += a[i][k] * b[k][j];
             }
         }
@@ -63,10 +69,10 @@ int main()
     Fmatrix(a, r1, c1);
     printf("\nEnter the second matrix:\n");
     Fmatrix(b, r2, c2);
-    printf("\nprint the multiplication:\n");
+    // printf("\nprint the multiplication:\n");
     multi(a, b, mul, r1, c1, r2, c2);
     printf("\nshow the multiplication of matrix:\n");
-    show(mul, r1, c1);
+    show(mul, r1, c2);
 
     return 0;
 }

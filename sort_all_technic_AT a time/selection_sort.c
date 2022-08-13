@@ -8,7 +8,19 @@
  *
  * @returns int
  */
-
+void pA(int a[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("%5d", a[i]);
+    }
+}
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 int main()
 {
     int count, i, j, min, temp, flag = 0;
@@ -21,6 +33,9 @@ int main()
         printf("element-%d:", i + 1);
         scanf("%d", &a[i]);
     }
+    printf("\nGiven Array:\n");
+    pA(a, count);
+    printf("\n");
     // compare and found minimum element >
     for (i = 0; i < count - 1; i++)
     {
@@ -34,20 +49,14 @@ int main()
         }
         if (min != i)
         {
-            temp = a[i];
-            a[i] = a[min];
-            a[min] = temp;
-            flag = 1;
+            swap(&a[i], &a[min]);
+            printf("pass ---%d: ",i+1);
+            pA(a, count);
+            printf("\n");
         }
     }
-    // print the value is
-    for (i = 0; i < count; i++)
-    {
-        printf("%5d", a[i]);
-    }
-    if (flag == 0)
-    {
-        printf("\nthis is sorted already..");
-    }
+    // print the value
+    printf("\nfinal output:\n");
+    pA(a, count);
     return 0;
 }
