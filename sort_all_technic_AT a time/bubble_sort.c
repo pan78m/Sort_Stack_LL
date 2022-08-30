@@ -8,6 +8,7 @@
  *
  * @returns int
  */
+int flag=0;
 void swap(int *a, int *b)
 {
     int temp = *a;
@@ -28,7 +29,7 @@ void print(int a[], int n)
 }
 int main()
 {
-    int n, i, j, temp, flag = 0;
+    int n, i, j, temp;
     printf("\n how many terms:");
     scanf("%d", &n);
     int a[n];
@@ -70,6 +71,6 @@ int main()
     // {
     //     printf("\n the value already sorted.\n");
     // }
-    print|(a,n);
+    print(a,n);
     return 0;
 }
